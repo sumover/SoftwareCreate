@@ -12,6 +12,10 @@
 2. 准备好了, 可以洗衣服了:可以运行
 3. 洗衣服中...:可以停止
 
+# UML 类图
+
+![](/UMLPicture/Status.png)
+
 # Code
 BaseMachine.java
 ```java
