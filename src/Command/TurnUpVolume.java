@@ -7,6 +7,7 @@ public class TurnUpVolume extends Command {
 
     @Override
     public void execute() {
+        System.out.println("turn up one volume voice.");
         ((TeleVision) executable).addVolume(1);
     }
 }

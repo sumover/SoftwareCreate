@@ -6,12 +6,12 @@ public class TwoWayAdapter implements SheepXi, WolfHui {
 
     @Override
     public void mea() {
-        sheepXi.mea();
+        wolfHui.aowu();
     }
 
     @Override
     public void aowu() {
-        wolfHui.aowu();
+        sheepXi.mea();
     }
 
     public TwoWayAdapter(SheepXi sheepXi) {
