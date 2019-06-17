@@ -1,4 +1,4 @@
 package Factory.AbstractFactory;
 
-public class StrongBody extends RobotBody {
+public class    StrongBody extends RobotBody {
 }
