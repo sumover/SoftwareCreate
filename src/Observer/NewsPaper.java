@@ -1,10 +1,15 @@
 package Observer;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class NewsPaper {
     List<NewsPaperSubscriber> list;
+
+    NewsPaper() {
+        list = new LinkedList<NewsPaperSubscriber>();
+    }
 
     public void addSubscriber(NewsPaperSubscriber subscriber) {
         list.add(subscriber);
