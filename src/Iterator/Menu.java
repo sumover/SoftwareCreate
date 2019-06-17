@@ -3,8 +3,10 @@ package Iterator;
 class MenuIterator extends Iterator<Food> {
     int index, size;
     Food[] foods;
+    Menu menu;
 
     public MenuIterator(Menu menu) {
+        this.menu = menu;
         foods = menu.foods;
         size = menu.size;
         index = 0;
@@ -12,7 +14,7 @@ class MenuIterator extends Iterator<Food> {
 
     @Override
     public boolean hasNext() {
-        return index == size;
+        return index != size;
     }
 
     @Override
@@ -25,6 +27,7 @@ class MenuIterator extends Iterator<Food> {
         for (int i = index; i < size; ++i)
             foods[i] = foods[i + 1];
         size = (size - 1) % Menu.maxn;
+        menu.size = size;
     }
 }
 
@@ -45,6 +48,6 @@ public class Menu extends Iterable {
 
     @Override
     public Iterator getIterator() {
-        return null;
+        return new MenuIterator(this);
     }
 }
