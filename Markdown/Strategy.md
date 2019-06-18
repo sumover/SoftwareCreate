@@ -1,16 +1,23 @@
 策略模式
-# 模式定义
 
-# 问题需求描述
+模式定义
+========
+
+问题需求描述
+============
 
 模拟一个奥特曼和高达, 他们有Attack, Defence, Run三种动作
 
-# UML
+UML
+===
 
-![](/UMLPicture/Strategy.png)
+![](../UMLPicture/Strategy.png)
 
-# Code
+Code
+====
+
 Hero.java
+
 ```java
 package Strategy;
 
@@ -38,7 +45,9 @@ public abstract class Hero {
     }
 }
 ```
+
 Gouda.java
+
 ```java
 package Strategy;
 
@@ -48,7 +57,9 @@ public class Gouda extends Hero{
     }
 }
 ```
+
 AutoMan.java
+
 ```java
 package Strategy;
 
@@ -58,14 +69,18 @@ public class AutoMan extends Hero {
     }
 }
 ```
+
 BaseAction.java
+
 ```java
 package Strategy;
 
 public abstract class BaseAction {
 }
 ```
+
 DefenceAction.java
+
 ```java
 package Strategy;
 
@@ -73,7 +88,9 @@ public abstract class DefenceAction extends BaseAction{
     public abstract void defence();
 }
 ```
+
 AttackAction.java
+
 ```java
 package Strategy;
 
@@ -81,7 +98,9 @@ public abstract class AttackAction extends BaseAction {
     public abstract void attack();
 }
 ```
+
 RunAction.java
+
 ```java
 package Strategy;
 
@@ -89,7 +108,9 @@ public abstract class RunAction extends BaseAction {
     public abstract void run();
 }
 ```
+
 Fly.java
+
 ```java
 package Strategy;
 
@@ -101,7 +122,9 @@ public class Fly extends RunAction {
     }
 }
 ```
+
 MachineGun.java
+
 ```java
 package Strategy;
 
@@ -112,7 +135,9 @@ public class Laser extends AttackAction {
     }
 }
 ```
+
 Mecha.java
+
 ```java
 package Strategy;
 
@@ -124,7 +149,9 @@ public class Mecha extends DefenceAction {
     }
 }
 ```
+
 Shield.java
+
 ```java
 package Strategy;
 
@@ -135,8 +162,12 @@ public class Shield extends DefenceAction {
     }
 }
 ```
-# 运行结果
+
+运行结果
+========
+
 Main.java
+
 ```java
 package Strategy;
 
@@ -156,7 +187,9 @@ public class Main {
     }
 }
 ```
+
 out
+
 ```
 now is automan!
 biubiubiu!!!

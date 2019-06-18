@@ -1,22 +1,25 @@
 *适配器模式*
 
-# 模式定义
+模式定义
+========
 
+问题需求描述
+============
 
+设计类图
+========
 
-# 问题需求描述
+![](../UMLPicture/Adapter.jpg)
 
+Code
+====
 
-# 设计类图
-
-![](/UMLPicture/Adapter.jpg)
-
-# Code
 #### 单向适配器
 
 我们模拟一个给华为手机充电的行为
 
 Huawei.java
+
 ```java
 package Adapter;
 
@@ -28,6 +31,7 @@ public class Huawei {
 ```
 
 ChinaPlugin.java
+
 ```java
 package Adapter;
 
@@ -39,6 +43,7 @@ public class ChinaPlugin {
 ```
 
 EuropePlugin.java
+
 ```java
 package Adapter;
 
@@ -50,6 +55,7 @@ public class EuropePlugin {
 ```
 
 OneWayAdapter.java
+
 ```java
 package Adapter;
 
@@ -72,6 +78,7 @@ public class OneWayAdapter extends ChinaPlugin {
 我们模拟一个披着狼皮的羊和披着羊皮的狼的行为
 
 SheepXi.java
+
 ```java
 package Adapter;
 
@@ -79,7 +86,9 @@ public interface SheepXi {
     void mea();
 }
 ```
+
 WolfHui.java
+
 ```java
 package Adapter;
 
@@ -87,7 +96,9 @@ public interface WolfHui {
     void aowu();
 }
 ```
+
 TwoWayAdapter.java
+
 ```java
 package Adapter;
 
@@ -116,7 +127,9 @@ public class TwoWayAdapter implements SheepXi, WolfHui {
     }
 }
 ```
-# 运行结果
+
+运行结果
+========
 
 #### 单向适配器模式Main
 
@@ -131,12 +144,15 @@ public class Main {
     }
 }
 ```
+
 out
+
 ```text
 get power 50!
 ```
 
 #### 双向适配器
+
 ```java
 package Adapter;
 
@@ -170,7 +186,9 @@ public class Main {
 }
 
 ```
+
 out
+
 ```text
 aowu~~
 mea~~~

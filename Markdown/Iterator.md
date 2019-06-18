@@ -1,14 +1,18 @@
 迭代器模式
 
-# 模式定义
+模式定义
+========
 
-# 问题描述
+问题描述
+========
 
 模拟一个菜单, 并遍历输出
 
-# Code
+Code
+====
 
 Food.java
+
 ```java
 package Iterator;
 
@@ -28,6 +32,7 @@ public class Food {
 ```
 
 Iterable.java
+
 ```java
 package Iterator;
 
@@ -37,6 +42,7 @@ public abstract class Iterable {
 ```
 
 Iterator.java
+
 ```java
 package Iterator;
 
@@ -50,6 +56,7 @@ public abstract class Iterator<T> {
 ```
 
 Menu.java
+
 ```java
 package Iterator;
 
@@ -105,9 +112,12 @@ public class Menu extends Iterable {
     }
 }
 ```
-# 运行结果
+
+运行结果
+========
 
 Main.java
+
 ```java
 package Iterator;
 

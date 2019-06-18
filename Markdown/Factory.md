@@ -1,12 +1,26 @@
-#简单工厂
-## 模式定义
+工厂 Factory
+============
 
-## 问题描述
+UML
+---
+
+![](../UMLPicture/Factory.png)
+
+#简单工厂
+
+模式定义
+--------
+
+问题描述
+--------
 
 模拟一个飞机的生产线
 
-## Code
+Code
+----
+
 Airplane.java
+
 ```java
 package Factory.SimpleFactory;
 
@@ -20,13 +34,15 @@ public class Airplane {
     public static Airplane getInstance() {
         return new Airplane();
     }
-    
+
     public static void main(String[]argv) {
         Airplane airplane = Airplane.getInstance();
     }
 }
 ```
-## 运行结果
+
+运行结果
+--------
 
 ```text
 add roll
@@ -34,17 +50,22 @@ add wing
 add engine
 ```
 
-# 工厂模式
+工厂模式
+========
 
-## 模式定义
+模式定义
+--------
 
-## 问题描述
+问题描述
+--------
 
 模拟一个美国巧克力和俄罗斯巧克力工厂
 
-## Code
+Code
+----
 
 Chocolate.java
+
 ```java
 package Factory.FactoryMode;
 
@@ -52,31 +73,24 @@ public class Chocolate {
 }
 ```
 
-BaseChocolateFactory.java
-```java
-package Factory.FactoryMode;
+BaseChocolateFactory.java\`\``java package Factory.FactoryMode;
 
-public abstract class BaseChocolateFactory {
-    public Chocolate getChocolate() {
-        Chocolate chocolate = new Chocolate();
-        processCoco();
-        heatChocolate();
-        addSugar();
-        coolingPlastic();
-        return chocolate;
-    }
+public abstract class BaseChocolateFactory { public Chocolate getChocolate() { Chocolate chocolate = new Chocolate(); processCoco(); heatChocolate(); addSugar(); coolingPlastic(); return chocolate; }
 
-    protected abstract void processCoco();
+```
+protected abstract void processCoco();
 
-    protected abstract void heatChocolate();
+protected abstract void heatChocolate();
 
-    protected abstract void addSugar();
+protected abstract void addSugar();
 
-    protected abstract void coolingPlastic();
-}
+protected abstract void coolingPlastic();
 ```
 
+\}\`\`\`
+
 RussianChocolateFactory.java
+
 ```java
 package Factory.FactoryMode;
 
@@ -104,6 +118,7 @@ public class RussianChocolateFactory extends BaseChocolateFactory {
 ```
 
 AmerciaChocolateFactory.java
+
 ```java
 package Factory.FactoryMode;
 
@@ -130,21 +145,27 @@ public class AmerciaChocolateFactory extends BaseChocolateFactory {
 }
 
 ```
+
 ~~由于实在是太复杂我就不写怎么运行的了~~
 
-# 抽象工厂
+抽象工厂
+========
 
-## 模式定义
+模式定义
+--------
 
-## 问题描述
+问题描述
+--------
 
 模拟一个中国制造2025生产的超级牛逼的机器人
 
 机器人的身体, 胳膊, 轮子来自不同的工厂
 
-## Code
+Code
+----
 
 Arm.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -153,6 +174,7 @@ public class Arm extends Part {
 ```
 
 BaseArmFactory.md
+
 ```java
 package Factory.AbstractFactory;
 
@@ -163,6 +185,7 @@ public abstract class BaseArmFactory extends BasePartsFactory {
 ```
 
 BasePartsFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -172,6 +195,7 @@ public abstract class BasePartsFactory {
 ```
 
 BaseRobotBodyFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -182,6 +206,7 @@ public abstract class BaseRobotBodyFactory extends BasePartsFactory {
 ```
 
 BaseRobotFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -217,6 +242,7 @@ public abstract class BaseRobotFactory {
 ```
 
 BaseRollFactory.java
+
 ```java
 
 package Factory.AbstractFactory;
@@ -228,6 +254,7 @@ public abstract class BaseRollFactory extends BasePartsFactory {
 ```
 
 BigRoll.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -235,15 +262,12 @@ public class BigRoll extends Roll {
 }
 ```
 
-ChineseArmFactory.java
-```java
-package Factory.AbstractFactory;
+ChineseArmFactory.java\`\``java package Factory.AbstractFactory;
 
-public class BigRoll extends Roll {
-}
-```
+public class BigRoll extends Roll { }\`\`\`
 
 ChineseRobotBodyFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -256,6 +280,7 @@ public class ChineseRobotBodyFactory extends BaseRobotBodyFactory {
 ```
 
 ChineseRobotFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -267,6 +292,7 @@ public class ChineseRobotFactory extends BaseRobotFactory {
 ```
 
 ChineseRollFactory.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -281,6 +307,7 @@ public class ChineseRollFactory extends BaseRollFactory {
 ```
 
 Part.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -289,6 +316,7 @@ public abstract class Part {
 ```
 
 Robot.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -306,6 +334,7 @@ public class Robot {
 ```
 
 RobotBody.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -314,6 +343,7 @@ public class RobotBody extends Part {
 ```
 
 Roll.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -331,6 +361,7 @@ public class SmallArm extends Arm {
 ```
 
 StrongBody.java
+
 ```java
 package Factory.AbstractFactory;
 
@@ -338,5 +369,5 @@ public class StrongBody extends RobotBody {
 }
 
 ```
-~~由于实在是太复杂我就不写怎么运行的了~~
 
+~~由于实在是太复杂我就不写怎么运行的了~~

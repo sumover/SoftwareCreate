@@ -1,23 +1,29 @@
 状态模式
 
-# 模式定义
+模式定义
+========
 
-# 问题描述
+问题描述
+========
 
 模拟洗衣机
 
 有三个状态:
 
-1. 空闲:可以添加衣服,加水
-2. 准备好了, 可以洗衣服了:可以运行
-3. 洗衣服中...:可以停止
+1.	空闲:可以添加衣服,加水
+2.	准备好了, 可以洗衣服了:可以运行
+3.	洗衣服中...:可以停止
 
-# UML 类图
+UML 类图
+========
 
-![](/UMLPicture/Status.png)
+![](../UMLPicture/Status.png)
 
-# Code
+Code
+====
+
 BaseMachine.java
+
 ```java
 package Status;
 
@@ -30,7 +36,9 @@ public abstract class BaseMachine {
     public abstract void stop();
 }
 ```
+
 IdleStatus.java
+
 ```java
 package Status;
 
@@ -62,7 +70,9 @@ public class IdleStatus extends Status {
     }
 }
 ```
+
 OnrunningStatus.java
+
 ```java
 package Status;
 
@@ -93,7 +103,9 @@ public class OnrunningStatus extends Status {
     }
 }
 ```
+
 PreparedStatus.java
+
 ```java
 package Status;
 
@@ -124,7 +136,9 @@ public class PreparedStatus extends Status {
     }
 }
 ```
+
 Status.java
+
 ```java
 package Status;
 
@@ -136,7 +150,9 @@ public abstract class Status extends BaseMachine {
     }
 }
 ```
+
 WashingMachine.java
+
 ```java
 package Status;
 
@@ -181,9 +197,12 @@ public class WashingMachine extends BaseMachine {
 
 }
 ```
-# 运行结果
+
+运行结果
+========
 
 Main.java
+
 ```java
 package Status;
 
@@ -198,7 +217,6 @@ public class Main {
         washingMachine.stop();
     }
 }
-
 ```
 
 out

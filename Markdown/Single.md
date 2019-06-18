@@ -1,14 +1,18 @@
 单例模式
 
-# 模式定义
+模式定义
+========
 
-# 问题描述
+问题描述
+========
 
 如何处理getInstance时的线程安全的问题
 
-# Code
+Code
+====
 
 SinglePatternFirst.java
+
 ```java
 package Single;
 
@@ -26,6 +30,7 @@ public class SinglePatternFirst {
 ```
 
 SinglePatternSecond.java
+
 ```java
 package Single;
 
@@ -39,6 +44,7 @@ public class SinglePatternSecond {
 ```
 
 SinglePatternThrid.java
+
 ```java
 package Single;
 

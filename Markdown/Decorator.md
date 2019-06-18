@@ -1,13 +1,19 @@
 装饰者模式
 
-# 模式定义
+模式定义
+========
 
-# 问题需求描述
+问题需求描述
+============
 
-# 设计类图
+设计类图
+========
 
-# Code
+Code
+====
+
 Food.java
+
 ```java
 package Decorator;
 
@@ -20,6 +26,7 @@ public abstract class Food {
 ```
 
 煎饼.java
+
 ```java
 package Decorator;
 
@@ -38,6 +45,7 @@ public class 煎饼 extends Food {
 ```
 
 BaseDrcorator.java
+
 ```java
 package Decorator;
 
@@ -57,6 +65,7 @@ public abstract class BaseDecorator extends Food {
 ```
 
 果子.java
+
 ```java
 package Decorator;
 
@@ -78,6 +87,7 @@ public class 果子 extends BaseDecorator {
 ```
 
 火腿肠.java
+
 ```java
 package Decorator;
 
@@ -101,6 +111,7 @@ public class 火腿肠 extends BaseDecorator {
 ```
 
 蛋.java
+
 ```java
 package Decorator;
 
@@ -121,9 +132,12 @@ public class 蛋 extends BaseDecorator {
 }
 
 ```
-# 运行结果
+
+运行结果
+========
 
 Main.java
+
 ```java
 package Decorator;
 
@@ -135,7 +149,9 @@ public class Main {
     }
 }
 ```
+
 out
+
 ```text
 2.3
 煎饼+蛋+果子

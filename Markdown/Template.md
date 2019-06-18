@@ -1,23 +1,29 @@
 模板模式
 
-# 模式定义
+模式定义
+========
 
-# 问题描述
+问题描述
+========
 
 模拟泡饮料的过程
 
-1. 加水
-2. 搅拌
-3. 等一会, 等饮料凉一会儿
+1.	加水
+2.	搅拌
+3.	等一会, 等饮料凉一会儿
 
 将具体的功能和hook函数下放给子类
 
-# UML 类图
+UML 类图
+========
 
-![](/UMLPicture/Template.png)
+![](../UMLPicture/Template.png)
 
-# Code
+Code
+====
+
 Drink.java
+
 ```java
 package Template;
 
@@ -48,6 +54,7 @@ public abstract class Drink {
 ```
 
 Coffee.java
+
 ```java
 package Template;
 
@@ -92,7 +99,9 @@ public final class Coffee extends Drink {
     }
 }
 ```
+
 ColdTea.java
+
 ```java
 package Template;
 
@@ -138,9 +147,12 @@ public final class ColdTea extends Drink {
     }
 }
 ```
-# 运行结果
+
+运行结果
+========
 
 Main.java
+
 ```java
 package Template;
 
@@ -158,7 +170,7 @@ public class Main {
 
 ```
 
-out 
+out
 
 ```
 make coffee.

@@ -1,16 +1,20 @@
 观察者模式
 
-# 模式定义
+模式定义
+========
 
-# 问题需求描述
+问题需求描述
+============
 
 模拟一个报纸订阅发送和b站和b站用户去b站get更新的行为
 
-# Code
+Code
+====
 
 Push模式, 报纸
 
 Newspaper.java
+
 ```java
 package Observer;
 
@@ -44,6 +48,7 @@ public class NewsPaper {
 ```
 
 NewsPaperSubscriber.java
+
 ```java
 package Observer;
 
@@ -72,6 +77,7 @@ public class NewsPaperSubscriber {
 pull 模式
 
 Bilibili.java
+
 ```java
 package Observer;
 
@@ -90,6 +96,7 @@ public class Bilibili {
 ```
 
 BilibiliUser.java
+
 ```java
 package Observer;
 
@@ -107,34 +114,12 @@ public class BilibiliUser {
 }
 ```
 
-# 运行结果
+运行结果
+========
 
-Main.java
-```java
-package Observer;
+Main.java\`\``java package Observer;
 
-public class Main {
-    public static void main(String[] args) {
-        NewsPaper newsPaper = new NewsPaper();
-        newsPaper.addSubscriber(new NewsPaperSubscriber());
-        newsPaper.addSubscriber(new NewsPaperSubscriber());
-        newsPaper.addSubscriber(new NewsPaperSubscriber());
-        newsPaper.sendNewspaper();
-        Bilibili bilibili = new Bilibili();
-        BilibiliUser user = new BilibiliUser(bilibili);
-        BilibiliUser user1 = new BilibiliUser(bilibili);
-        BilibiliUser user2 = new BilibiliUser(bilibili);
-        bilibili.refreshMessage("23333");
-        user.getMessage();
-        user1.getMessage();
-        user2.getMessage();
-        bilibili.refreshMessage("12222");
-        user.getMessage();
-        user1.getMessage();
-        user2.getMessage();
-    }
-}
-```
+public class Main { public static void main(String[] args) { NewsPaper newsPaper = new NewsPaper(); newsPaper.addSubscriber(new NewsPaperSubscriber()); newsPaper.addSubscriber(new NewsPaperSubscriber()); newsPaper.addSubscriber(new NewsPaperSubscriber()); newsPaper.sendNewspaper(); Bilibili bilibili = new Bilibili(); BilibiliUser user = new BilibiliUser(bilibili); BilibiliUser user1 = new BilibiliUser(bilibili); BilibiliUser user2 = new BilibiliUser(bilibili); bilibili.refreshMessage("23333"); user.getMessage(); user1.getMessage(); user2.getMessage(); bilibili.refreshMessage("12222"); user.getMessage(); user1.getMessage(); user2.getMessage(); } }\`\`\`
 
 out
 
